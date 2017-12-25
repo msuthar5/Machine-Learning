@@ -46,7 +46,7 @@ for i in range(0, len(d)):
         d.iloc[i,1] = np.int32(0)
 d.iloc[:,1] = d.iloc[:,1].astype('int8')
 
-test_data, train_data = train_test_split(d,test_size=0.2)
+#test_data, train_data = train_test_split(d,test_size=0.2)
 
 test_data_label = test_data.label
 train_data_label = train_data.label
