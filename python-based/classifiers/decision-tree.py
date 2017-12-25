@@ -51,9 +51,12 @@ test_data, train_data = train_test_split(d,test_size=0.2)
 test_data_label = test_data.label
 train_data_label = train_data.label
 
+td = train_data.iloc[:,1:10]
+td
+
 # Define classifier
 classifier = tree.DecisionTreeClassifier()
-classifier.fit(train_data, train_data_label)
+classifier.fit(td, train_data_label)
 
 dot_data = tree.export_graphviz(classifier, out_file=None)
 graph = graphviz.Source(dot_data)
