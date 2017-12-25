@@ -51,6 +51,7 @@ test_data, train_data = train_test_split(d,test_size=0.2)
 test_data_label = test_data.label
 train_data_label = train_data.label
 
+# Define classifier
 classifier = tree.DecisionTreeClassifier()
 classifier.fit(train_data, train_data_label)
 
